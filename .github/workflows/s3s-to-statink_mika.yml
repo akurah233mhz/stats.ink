@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       API_KEY_M: ${{ secrets.API_KEY }}
-      ACC_LOC_M: ${{ secrets.ACC_LOC }}
+      ACC_LOC: ${{ secrets.ACC_LOC }}
       GTOKEN_M: ${{ secrets.GTOKEN }}
       BULLETTOKEN_M: ${{ secrets.BULLETTOKEN }}
       SESSION_TOKEN_M: ${{ secrets.SESSION_TOKEN }}
-      F_GEN_M: ${{ secrets.F_GEN }}
+      F_GEN: ${{ secrets.F_GEN }}
 
     name: Splatoon3 Battlelog Uploader
     steps:
