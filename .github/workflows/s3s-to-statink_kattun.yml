@@ -29,11 +29,11 @@ jobs:
           repository: 'frozenpandaman/s3s'
           path: s3s
 
-      - name: Generate config_K.txt
+      - name: Generate config.txt
         working-directory: s3s
         run: |
-          echo '{"api_key": "${{ env.API_KEY_K }}", "acc_loc": "${{ env.ACC_LOC }}", "gtoken": "${{ env.GTOKEN_K }}", "bullettoken": "${{ env.BULLETTOKEN_K }}", "session_token": "${{ env.SESSION_TOKEN_K }}", "f_gen": "${{ env.F_GEN }}" }' > config_K.txt
-          cat config_K.txt
+          echo '{"api_key": "${{ env.API_KEY_K }}", "acc_loc": "${{ env.ACC_LOC }}", "gtoken": "${{ env.GTOKEN_K }}", "bullettoken": "${{ env.BULLETTOKEN_K }}", "session_token": "${{ env.SESSION_TOKEN_K }}", "f_gen": "${{ env.F_GEN }}" }' > config.txt
+          cat config.txt
       - name: Install s3s requirements
         working-directory: s3s
         run: |
