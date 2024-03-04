@@ -9,11 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      API_KEY_K: ${{ secrets.API_KEY }}
+      API_KEY_K: ${{ secrets.API_KEY_K }}
       ACC_LOC: ${{ secrets.ACC_LOC }}
-      GTOKEN_K: ${{ secrets.GTOKEN }}
-      BULLETTOKEN_K: ${{ secrets.BULLETTOKEN }}
-      SESSION_TOKEN_K: ${{ secrets.SESSION_TOKEN }}
+      GTOKEN_K: ${{ secrets.GTOKEN_K }}
+      BULLETTOKEN_K: ${{ secrets.BULLETTOKEN_K }}
+      SESSION_TOKEN_K: ${{ secrets.SESSION_TOKEN_K }}
       F_GEN: ${{ secrets.F_GEN }}
 
     name: Splatoon3 Battlelog Uploader_K
