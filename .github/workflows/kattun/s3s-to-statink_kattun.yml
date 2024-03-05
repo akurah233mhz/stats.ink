@@ -9,11 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      API_KEY_K: ${{ secrets.API_KEY_K }}
+      API_KEY: ${{ secrets.API_KEY_K }}
       ACC_LOC: ${{ secrets.ACC_LOC }}
-      GTOKEN_K: ${{ secrets.GTOKEN_K }}
-      BULLETTOKEN_K: ${{ secrets.BULLETTOKEN_K }}
-      SESSION_TOKEN_K: ${{ secrets.SESSION_TOKEN_K }}
+      GTOKEN: ${{ secrets.GTOKEN_K }}
+      BULLETTOKEN: ${{ secrets.BULLETTOKEN_K }}
+      SESSION_TOKEN: ${{ secrets.SESSION_TOKEN_K }}
       F_GEN: ${{ secrets.F_GEN }}
 
     name: Splatoon3 Battlelog Uploader_K
@@ -29,11 +29,11 @@ jobs:
           repository: 'frozenpandaman/s3s'
           path: s3s
 
-      - name: Generate config.txt
+      - name: Generate config_K.txt
         working-directory: s3s
         run: |
-          echo '{"api_key": "${{ env.API_KEY_K }}", "acc_loc": "${{ env.ACC_LOC }}", "gtoken": "${{ env.GTOKEN_K }}", "bullettoken": "${{ env.BULLETTOKEN_K }}", "session_token": "${{ env.SESSION_TOKEN_K }}", "f_gen": "${{ env.F_GEN }}" }' > config.txt
-          cat config.txt
+          echo '{"api_key": "${{ env.API_KEY }}", "acc_loc": "${{ env.ACC_LOC }}", "gtoken": "${{ env.GTOKEN }}", "bullettoken": "${{ env.BULLETTOKEN }}", "session_token": "${{ env.SESSION_TOKEN }}", "f_gen": "${{ env.F_GEN }}" }' > config_K.txt
+          cat config_K.txt
       - name: Install s3s requirements
         working-directory: s3s
         run: |
