@@ -1,4 +1,4 @@
-name: Splatoon3 Battlelog Uplorder
+name: Splatoon3 Battlelog Uplorder_M
 
 on:
   schedule:
@@ -9,14 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      API_KEY_M: ${{ secrets.API_KEY }}
+      API_KEY: ${{ secrets.API_KEY_M }}
       ACC_LOC: ${{ secrets.ACC_LOC }}
-      GTOKEN_M: ${{ secrets.GTOKEN }}
-      BULLETTOKEN_M: ${{ secrets.BULLETTOKEN }}
-      SESSION_TOKEN_M: ${{ secrets.SESSION_TOKEN }}
+      GTOKEN: ${{ secrets.GTOKEN_M }}
+      BULLETTOKEN: ${{ secrets.BULLETTOKEN_M }}
+      SESSION_TOKEN: ${{ secrets.SESSION_TOKEN_M }}
       F_GEN: ${{ secrets.F_GEN }}
 
-    name: Splatoon3 Battlelog Uploader
+    name: Splatoon3 Battlelog Uploader_M
     steps:
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
